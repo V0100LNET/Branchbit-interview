@@ -3,15 +3,14 @@
 }
 
 .information-client {
-    display: flex;
+    /* display: flex;
     justify-content: center;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap;  */
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
 }
-
-/* .information-client > * {
-    margin-right: 30px;
-} */
 
 .btn-blue { 
     font-size: 0.9rem;
@@ -21,6 +20,7 @@
 }
 
 .content-button-actions {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -33,7 +33,11 @@
 }
 
 .content-button-actions:nth-child(3) {
-    width: 81.5%;
+    /* max-width: 900px; */
+    width: 100%;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 @media screen and (max-width: 768px) {

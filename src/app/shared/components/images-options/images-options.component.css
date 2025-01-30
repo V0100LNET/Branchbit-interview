@@ -80,37 +80,6 @@ img {
     text-align: start;
 }
 
-
-/* .responsive-table {
-    width: 100%;
-    overflow-x: auto;
-}
-
-.table {
-    width: 100%;
-    margin-top: 10px;
-    border-collapse: collapse;
-}
-
-.table th, .table td {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    text-align: start;
-}
-
-.table th {
-    text-align: start;
-}
-
-.table .titles {
-    text-align: center;
-}
-
-.table .checkbox {
-    text-align: center;
-} */
-
 @media screen and (max-width: 1273px) {
     img {
         width: 150px;

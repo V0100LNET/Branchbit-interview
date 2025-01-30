@@ -1,28 +1,32 @@
-
 .title-page {
     margin-top: 20px;
 }
 
-.table {
+.content-tables {
+    -webkit-overflow-scrolling: touch; /*mejora el scroll en dispositivos moviles*/
     width: 100%;
-    margin-top: 20px;
+    overflow-x: auto;
 }
 
-.table th, .table td {
+.content-tables table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.content-tables table th, .content-tables table td {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
     text-align: start;
 }
 
-.table th {
-    text-align: start;
-}
-
-.table .titles {
-    text-align: center;
-}
-
-.table .checkbox {
-    text-align: center;
+@media screen and (max-width: 768px) {
+    table {
+        min-width: 500px;
+        width: 100%;
+    }
+    
+    th, td {
+        font-size: 0.8rem;
+    }
 }
