@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./biometrics.component.css']
 })
 export class BiometricsComponent {
-
+  finish(): void {
+    console.log('finish');
+  }
 }

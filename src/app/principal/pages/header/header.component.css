@@ -1,0 +1,172 @@
+.divider {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    opacity: 0.3;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: var(--color-background-header);
+    /* display: flex; */
+    /* align-items: flex-end; */
+    /* flex-direction: column; */
+    /* justify-content: flex-start; */
+    padding: 10px 10px;
+    /* height: 90px; */
+    z-index: 90;
+    overflow: hidden;
+    color: var(--color-theme-principal);
+}
+
+.header .info {
+    display: flex;
+    width: 100%;
+}
+
+.header .content-progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    width: 33.33%
+}
+
+.header .content-progress .name-progress {
+    white-space: nowrap;
+}
+
+.header .content-progress > * {
+    margin-right: 8px;
+}
+
+.header .menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header .info .menu {
+    width: 100%;
+}
+
+.header .info .menu .icon-menu {
+    color: var(--color-default-icons);
+}
+
+.header .info .menu button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .info .menu .mat-icon {
+    font-size: 1.4rem;
+}
+
+.header .info .menu button span {
+    display: block;
+    font-size: 1rem;
+    color: var(--color-theme-principal);
+    margin-top: 5px;
+}
+
+.header .info .logo {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+
+.header .info .logo img {
+    width: 30px;
+    margin-right: 10px;
+    opacity: 0.5;
+}
+
+.header .info .logout {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header .info .logout .info-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .info .logout .info-profile div {
+    margin-right: 10px;
+}
+
+.header .info .logout .info-profile .name {
+    font-size: 1rem;
+    color: var(--color-theme-principal);
+}
+
+.header .info .logout .info-profile .role {
+    font-size: 0.9rem;
+    line-height: 1;
+    letter-spacing: 1px;
+    color: #a7a7a7;
+}
+
+.header .info .logout .info-profile img {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header .info .logout .user .btn-notification {
+    border: none;
+    cursor: pointer;
+}
+
+.header .info .logout .user img {
+    width: 25px;
+}
+
+.header .info .logout .user {
+    margin-right: 30px;
+    gap: 10px;
+}
+
+.header .info .logout .user .icon-logout {
+    color: var(--color-default-icons);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .header .info {
+        justify-content: space-around;
+    }
+
+    .header .info .logo {
+        display: none;
+    }
+
+    .header .info .logout {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header .content-progress {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .header .info .logout .info-profile img, 
+    .header .info .logout .info-profile .role {
+        display: none;
+    }
+}

@@ -1,0 +1,42 @@
+<section class="content-images">
+    <div class="image1">
+        <button (click)="deleteImage1()" *ngIf="isImg1Selected" title="Eliminar imagen" class="close-image"><mat-icon>close</mat-icon></button>
+        <label class="btn-load-image" for="loadImage1">Cargar imagen</label>
+        <input [hidden]="true" id="loadImage1" type="file" accept=".jpg, .png, .jpeg" (change)="loadImage1($event)">
+        <img [src]="urlImage1" alt="Imagen seleccionada">
+    </div>
+    <div class="image1">
+        <button (click)="deleteImage2()" *ngIf="isImg2Selected" title="Eliminar imagen" class="close-image"><mat-icon>close</mat-icon></button>
+        <label class="btn-load-image" for="loadImage2">Cargar imagen</label>
+        <input [hidden]="true" id="loadImage2" type="file" accept=".jpg, .png, .jpeg" (change)="loadImage2($event)">
+        <img [src]="urlImage2" alt="Imagen seleccionada">
+    </div>
+    <div class="image1">
+        <button (click)="deleteImage3()" *ngIf="isImg3Selected" title="Eliminar imagen" class="close-image"><mat-icon>close</mat-icon></button>
+        <label class="btn-load-image" for="loadImage3">Cargar imagen</label>
+        <input [hidden]="true" id="loadImage3" type="file" accept=".jpg, .png, .jpeg" (change)="loadImage3($event)">
+        <img [src]="urlImage3" alt="Imagen seleccionada">
+    </div>
+</section>
+<section class="content-tables">
+    <table>
+        <tr>
+            <th>Selecciona tu respuesta de acuerdo al resultado de la búsqueda</th>
+            <th class="titles">SI</th>
+            <th class="titles">NO</th>
+            <th class="titles">No Aplica</th>
+        </tr>
+        <tr>
+            <td>¿La información devuelta por tus consultas es vigente?</td>
+            <td class="checkbox"><mat-checkbox></mat-checkbox></td>
+            <td class="checkbox"><mat-checkbox></mat-checkbox></td>
+            <td class="checkbox"><mat-checkbox></mat-checkbox></td>
+        </tr>
+        <tr>
+            <td>¿La información devuelta por las coincide con la identificación del cliente?</td>
+            <td class="checkbox"><mat-checkbox></mat-checkbox></td>
+            <td class="checkbox"><mat-checkbox></mat-checkbox></td>
+            <td class="checkbox"><mat-checkbox></mat-checkbox></td>
+        </tr>
+    </table>
+</section>

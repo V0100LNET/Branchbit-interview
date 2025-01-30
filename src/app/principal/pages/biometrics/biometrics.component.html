@@ -1,1 +1,50 @@
-<p>biometrics works!</p>
+<app-info-table></app-info-table>
+<section class="container information-client">
+    <mat-form-field appearance="outline" class="select-records">
+        <mat-label>Seleccionar</mat-label>
+        <mat-select placeholder="Seleccionar">
+            <mat-option value="Expediente Crédito">Expediente Crédito</mat-option>
+            <mat-option value="Expediente Capacitación">Expediente Capacitación</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+        <mat-tab label="Identificación">
+            <app-images-options></app-images-options>
+            <app-external-links></app-external-links>
+            <app-application-response></app-application-response>
+        </mat-tab>
+        <mat-tab label="Comprobante">
+            <app-images-options></app-images-options>
+            <app-external-links></app-external-links>
+            <app-application-response></app-application-response>
+        </mat-tab>
+        <mat-tab label="Propiedad">
+            <app-images-options></app-images-options>
+            <app-external-links></app-external-links>
+            <app-application-response></app-application-response>
+        </mat-tab>
+        <mat-tab label="Contrato">
+            <app-images-options></app-images-options>
+            <app-external-links></app-external-links>
+            <app-application-response></app-application-response>
+        </mat-tab>
+        <mat-tab label="Contacto">
+            <app-images-options></app-images-options>
+            <app-external-links></app-external-links>
+            <app-application-response></app-application-response>
+        </mat-tab>
+        <mat-tab label="Fotografía">
+            <app-images-options></app-images-options>
+            <app-external-links></app-external-links>
+            <app-application-response></app-application-response>
+        </mat-tab>
+    </mat-tab-group>
+    <div class="container content-button-actions">
+        <button mat-raised-button 
+                type="submit"
+                class="btn-blue" 
+                (click)="finish()">
+            {{'Finalizar'}}
+        </button>
+    </div>
+</section>

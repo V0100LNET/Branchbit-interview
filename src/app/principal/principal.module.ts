@@ -6,13 +6,15 @@ import { PrincipalRoutingModule } from './principal-routing.module';
 import { MaterialModule } from '../material/material.module';
 import { SharedModule } from '../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from './pages/header/header.component';
 
 
 
 @NgModule({
   declarations: [
     MainComponent,
-    BiometricsComponent
+    BiometricsComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,

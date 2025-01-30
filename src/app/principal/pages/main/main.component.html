@@ -1,2 +1,17 @@
-<h1>Hola</h1>
-<router-outlet></router-outlet>
+<app-header [drawer]="drawer"></app-header>
+
+<section class="content-menu">
+    <mat-drawer-container autosize class="menu-drawer">
+        <mat-drawer #drawer mode="over" autoFocus="false">
+            <mat-list class="list-menu">
+                <mat-list-item (click)="drawer.close()" class="item" [routerLinkActive]="['is-active']" routerLink="/principal/biometrics">
+                    <mat-icon>biotech</mat-icon>
+                    <span>Biometrics</span>
+                </mat-list-item>
+            </mat-list>
+        </mat-drawer>  
+        <mat-drawer-content>
+            <router-outlet></router-outlet>
+        </mat-drawer-content>
+    </mat-drawer-container>
+</section>

@@ -1,0 +1,146 @@
+img {
+    width: 250px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.content-images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-images > * {
+    margin-right: 15px;
+}
+
+.content-images .image1 .close-image {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.image1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #f0f0f0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 8px 15px;
+}
+
+.btn-load-image {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--color-theme-principal);
+    background-color: var(--color-theme-principal);
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    display: none;
+}
+
+.btn-load-image:hover {
+    background-color: var(--color-theme-principal-hover);
+}
+
+.image1:hover {
+    .btn-load-image {
+        display: block;
+    }
+}
+
+.content-tables {
+    -webkit-overflow-scrolling: touch; /*mejora el scroll en dispositivos moviles*/
+    width: 100%;
+    overflow-x: auto;
+}
+
+.content-tables table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.content-tables table th, .content-tables table td {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: start;
+}
+
+
+/* .responsive-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: start;
+}
+
+.table th {
+    text-align: start;
+}
+
+.table .titles {
+    text-align: center;
+}
+
+.table .checkbox {
+    text-align: center;
+} */
+
+@media screen and (max-width: 1273px) {
+    img {
+        width: 150px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    img {
+        width: 300px;
+    }
+
+    .content-images {
+        flex-direction: column;
+    }
+
+    table {
+        min-width: 500px;
+        width: 100%;
+    }
+    
+    th, td {
+        font-size: 0.8rem;
+    }
+
+    .image1 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        padding: 5px;
+        box-shadow: none;
+        border: none;
+    }
+}

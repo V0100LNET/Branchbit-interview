@@ -1,12 +1,22 @@
 :root {
-    --color-background: #050b0e;
-    --color-text-yellow: #eeee0b; 
-    --color-text-gray: #888888; 
-    --color-text-title: white;
-    --color-bg-card:#0f1314;
-    --color-status-active: #0C7DED;
-    --color-status-complete: #51A351;
-    --color-status-assigned: #888888;
+    --color-theme-principal: #060359;
+    --color-theme-secondary: #4E1B56;
+    --color-theme-principal-hover: #1b195e;
+    --color-background-header: #f2f0f0;
+    --color-hover-menu: #f3f1f1;
+    --color-content-page: #ffffff;
+    --color-filter: #000000;
+    --color-red-label: #E2274B;
+    --color-icon-delete: #BD362F;
+    --color-warning: #F89406;
+    --color-active: #51A351;
+    --color-inactive: #C62449;
+    --color-in-confirm: #F89406;
+    --color-bg-grey: #ebebeb;
+    --color-bg-label-no-results: #fafafa;
+    --color-text-label-no-results: #424242;
+    --color-default-icons: #008BFF;
+    --color-info: #2F96B4;
 }
 
 *,
@@ -27,5 +37,54 @@ body {
 [hidden] {
     display: none !important;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container {
+    padding: 0 10px;
+}
+
+.general-status {
+    display: table;
+    width: 120px;
+    height: 20px;
+    padding: 0 0.5rem;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 28px;
+    color: white !important;
+    font-weight: bold;
+    font-size: 12px;
+} 
+
+.active {
+    background-color: var(--color-active);
+}
+
+.inactive, .cancel {
+    background-color: var(--color-inactive);
+}
+
+.content-tables .table .table__actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+/*color inputs table*/
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: transparent;
+}
+
+/*progress bar bg*/
+.mat-mdc-progress-bar {
+    --mdc-linear-progress-active-indicator-color: var(--color-theme-principal);
+}
+
+/*color check*/
+.mat-mdc-checkbox .mdc-checkbox .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background, .mat-mdc-checkbox .mdc-checkbox .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background, .mat-mdc-checkbox .mdc-checkbox .mdc-checkbox__native-control[data-indeterminate=true]:enabled~.mdc-checkbox__background {
+    border-color: var(--color-theme-principal) !important;
+    background-color: var(--color-theme-principal) !important;
+}
+
+

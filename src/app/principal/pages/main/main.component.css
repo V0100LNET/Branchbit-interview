@@ -1,0 +1,41 @@
+.content-menu {
+    position: relative;
+    height: 89.1vh;
+    overflow-y: hidden;
+}
+
+.content-menu .menu-drawer{
+    height: 100%;
+}
+
+.content-menu .menu-drawer .list-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-menu .menu-drawer .item {
+    width: 250px;
+    cursor: pointer;
+}
+
+.content-menu .menu-drawer .item mat-icon {
+    display: block;
+    color: var(--color-theme-principal);
+}
+
+.content-menu .menu-drawer .item span {
+    color: black;
+    margin-top: 4px;
+    margin-left: 5px;
+}
+
+.content-menu .menu-drawer .item:hover {
+    background-color: var(--color-hover-menu);
+}
+
+::ng-deep .content-menu .menu-drawer .list-menu .item .mat-mdc-list-item-unscoped-content.mdc-list-item__primary-text {
+    display: flex;
+    align-items: center;
+}

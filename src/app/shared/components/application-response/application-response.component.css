@@ -1,0 +1,57 @@
+.title {
+    margin-top: 20px;
+}
+
+.application-response {
+    margin-top: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 15px;
+    margin-bottom: 5px;
+}
+
+.application-response .info {
+    display: flex;
+    justify-content: center;
+}
+
+.application-response .content-info label {
+    margin-right: 50px;
+}
+
+.application-response .content-info mat-form-field {
+    width: 450px;
+    margin-top: 10px;
+}
+
+.application-response mat-form-field {
+    max-width: 400px;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .application-response {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .application-response .content-inputs {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+    }
+
+    .application-response .content-info mat-form-field {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .application-response mat-form-field {
+        max-width: 100%;;
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,44 @@
+<section class="header">
+    <div class="info">
+        <div class="menu">
+            <button mat-button (click)="openMenu()">
+                <mat-icon class="icon-menu">menu</mat-icon>
+                <span>Menú</span>
+            </button>
+            <div class="logo">
+                <img src="assets/icons/arroba.svg" alt="">
+                {{ 'Biométricos' }}
+            </div>
+        </div>
+        <div class="logout">
+            <div class="user">
+                <button class="btn-notification" [matMenuTriggerFor]="beforeMenu" matBadge="2">
+                    <mat-icon class="icon-notification">notifications</mat-icon>
+                </button>
+                <mat-menu #beforeMenu="matMenu" xPosition="before">
+                    <button mat-menu-item>
+                        <mat-icon>email</mat-icon>
+                        <span>email</span>
+                    </button>
+                    <button mat-menu-item>
+                        <mat-icon>voicemail</mat-icon>
+                        <span>Check voice mail</span>
+                    </button>
+                </mat-menu> 
+            </div>
+            <div class="info-profile">
+                <div>
+                    <h4 class="name">Paco Rion</h4>
+                    <p class="role">Agente Mesa</p>
+                </div>
+                <img src="assets/img/user2.jpg" alt="image profile">
+            </div>
+        </div>
+    </div>
+    <mat-divider class="divider"></mat-divider>
+    <div class="content-progress">
+        <p class="name-progress">Estado del folio</p>
+        <mat-progress-bar mode="determinate" value="50"></mat-progress-bar>
+        <p>50%</p>
+    </div>
+</section>

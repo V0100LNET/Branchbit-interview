@@ -1,0 +1,44 @@
+.select-records {
+    width: 300px;
+}
+
+.information-client {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* .information-client > * {
+    margin-right: 30px;
+} */
+
+.btn-blue { 
+    font-size: 0.9rem;
+    width: auto;
+    background-color: var(--color-theme-principal) !important;
+    color: white !important;
+}
+
+.content-button-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+
+.information-client .select-records {
+    width: 300px;
+    height: 50px;
+}
+
+.content-button-actions:nth-child(3) {
+    width: 81.5%;
+}
+
+@media screen and (max-width: 768px) {
+    .information-client .select-records {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
