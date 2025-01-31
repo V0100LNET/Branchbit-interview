@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { MatSelectChange } from '@angular/material/select';
 import { BiometricsService } from '../../services/biometrics.service';
+import { MatSelectChange } from '@angular/material/select';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-application-response',

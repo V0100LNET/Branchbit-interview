@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,10 +8,6 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
   @Input() drawer!: MatDrawer;
-
-  constructor(
-    private router: Router,
-  ){}
 
   openMenu() {
     this.drawer.toggle();

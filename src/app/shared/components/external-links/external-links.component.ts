@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { MatTabChangeEvent } from '@angular/material/tabs';
+import { Questions, Responses } from '../../interfaces/principal/images-options.interface';
 import { TabEventInfoExternalLink } from '../../interfaces/generla.interface';
 import { BiometricsService } from '../../services/biometrics.service';
-import { Questions, Responses } from '../../interfaces/principal/images-options.interface';
+import { MatTabChangeEvent } from '@angular/material/tabs';
 import { DataService } from '../../services/data.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-external-links',
@@ -65,32 +65,19 @@ export class ExternalLinksComponent implements OnInit {
     }
   }
 
-  selectedIndexTab(event: MatTabChangeEvent): void {
+  selectedTabChange(event: MatTabChangeEvent): void {
     this.tabEventInfoExternalLink = { indexTab: event.index, nameTab: event.tab.textLabel };    
     this.initDataFormTabLinkExternal();
   }
 
   initCheckQuestion(field: string, checkBoxText: string): void {    
-    switch(this.biometricsService.tabEvent?.indexTab){
-      case 0: 
-        this.biometricsService.formIdentification.get(field)?.setValue(checkBoxText);
-      break;
-      case 1: 
-        this.biometricsService.formVoucher.get(field)?.setValue(checkBoxText);
-      break;
-      case 2: 
-        this.biometricsService.formProperty.get(field)?.setValue(checkBoxText);
-      break;
-      case 3: 
-        this.biometricsService.formContract.get(field)?.setValue(checkBoxText);
-      break;
-      case 4: 
-        this.biometricsService.formContact.get(field)?.setValue(checkBoxText);
-      break;
-      case 5: 
-        this.biometricsService.formPicture.get(field)?.setValue(checkBoxText);
-      break;
-    }
+    this.biometricsService.formIdentification.get(field)?.setValue(checkBoxText);
+    this.biometricsService.formVoucher.get(field)?.setValue(checkBoxText);
+    this.biometricsService.formProperty.get(field)?.setValue(checkBoxText);
+    this.biometricsService.formContract.get(field)?.setValue(checkBoxText);
+    this.biometricsService.formContact.get(field)?.setValue(checkBoxText);
+    this.biometricsService.formPicture.get(field)?.setValue(checkBoxText);
+
   }
 
   onCheckboxChangeINE(questionIndex: number, responseIndex: number, numberQuestion: number) {
