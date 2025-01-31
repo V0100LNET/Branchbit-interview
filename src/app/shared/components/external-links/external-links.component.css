@@ -20,6 +20,11 @@
     text-align: start;
 }
 
+.content-tables table .titles,
+.content-tables table .checkbox {
+    text-align: center;
+}
+
 @media screen and (max-width: 768px) {
     table {
         min-width: 500px;

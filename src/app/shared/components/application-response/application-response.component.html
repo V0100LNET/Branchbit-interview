@@ -5,25 +5,26 @@
             <label>Respuesta</label>
             <mat-form-field appearance="outline">
                 <mat-label>Respuesta</mat-label>
-                <mat-select placeholder="Seleccionar">
-                    <mat-option value="Aprobada">Aprobada</mat-option>
-                    <mat-option value="Rechazada">Rechazada</mat-option>
+                <mat-select placeholder="Seleccionar" (selectionChange)="selectionChangeRes($event)">
+                    <mat-option value="aprobada">Aprobada</mat-option>
+                    <mat-option value="rechazada">Rechazada</mat-option>
                 </mat-select>
             </mat-form-field>
         </div>
         <div class="content-inputs">
-            <label>Respuesta</label>
-            <mat-form-field appearance="outline">
-                <mat-label>Respuesta</mat-label>
-                <mat-select placeholder="Seleccionar">
-                    <mat-option value="Aprobada">Aprobada</mat-option>
-                    <mat-option value="Rechazada">Rechazada</mat-option>
+            <label>Motivo</label>
+            <mat-form-field appearance="outline" class="margin-left">
+                <mat-label>Motivo</mat-label>
+                <mat-select placeholder="Seleccionar" (selectionChange)="selectionChangeMot($event)">
+                    <mat-option value="fotoNoCoincide">Fotografía del Cliente no Coincide</mat-option>
+                    <mat-option value="fotoBorrosa">Fotografía Borrosa o Manipulada</mat-option>
+                    <mat-option value="fotoNoVisible">Fotografía no Visible</mat-option>
                 </mat-select>
             </mat-form-field>
         </div>
     </section>
     <mat-form-field class="observations" appearance="outline" class="textarea">
         <mat-label>Observaciones...</mat-label>
-        <textarea matInput></textarea>
+        <textarea (keyup)="changeTextArea($event)" matInput></textarea>
     </mat-form-field>
 </section>

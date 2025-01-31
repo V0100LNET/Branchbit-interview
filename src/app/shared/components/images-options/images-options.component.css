@@ -80,6 +80,11 @@ img {
     text-align: start;
 }
 
+.content-tables table .titles,
+.content-tables table .checkbox {
+    text-align: center;
+}
+
 @media screen and (max-width: 1273px) {
     img {
         width: 150px;

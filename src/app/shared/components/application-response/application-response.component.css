@@ -2,6 +2,10 @@
     margin-top: 20px;
 }
 
+.margin-left {
+    margin-left: 25px;
+}
+
 .application-response {
     margin-top: 20px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -29,6 +33,12 @@
 .application-response mat-form-field {
     max-width: 400px;
     width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+    .margin-left {
+        margin-left: 0;
+    }
 }
 
 @media screen and (max-width: 768px) {

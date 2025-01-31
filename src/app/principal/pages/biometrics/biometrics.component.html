@@ -2,12 +2,12 @@
 <section class="container information-client">
     <mat-form-field appearance="outline" class="select-records">
         <mat-label>Seleccionar</mat-label>
-        <mat-select placeholder="Seleccionar">
-            <mat-option value="Expediente Crédito">Expediente Crédito</mat-option>
-            <mat-option value="Expediente Capacitación">Expediente Capacitación</mat-option>
+        <mat-select placeholder="Seleccionar" [value]="selectedInfo" (selectionChange)="selectionChange($event)">
+            <mat-option value="expCredito">Expediente Crédito</mat-option>
+            <mat-option value="expCapacitacion">Expediente Capacitación</mat-option>
         </mat-select>
     </mat-form-field>
-    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center" (selectedTabChange)="selectedTabChange($event)">
         <mat-tab label="Identificación">
             <app-images-options></app-images-options>
             <app-external-links></app-external-links>

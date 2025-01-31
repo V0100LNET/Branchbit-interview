@@ -5,6 +5,8 @@ import { MaterialModule } from '../material/material.module';
 import { ImagesOptionsComponent } from './components/images-options/images-options.component';
 import { ExternalLinksComponent } from './components/external-links/external-links.component';
 import { ApplicationResponseComponent } from './components/application-response/application-response.component';
+import { FormsModule } from '@angular/forms';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 
@@ -13,11 +15,13 @@ import { ApplicationResponseComponent } from './components/application-response/
     InfoTableComponent,
     ImagesOptionsComponent,
     ExternalLinksComponent,
-    ApplicationResponseComponent
+    ApplicationResponseComponent,
+    ModalComponent
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   exports: [
     InfoTableComponent,

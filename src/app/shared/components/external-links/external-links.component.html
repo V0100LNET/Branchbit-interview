@@ -1,96 +1,78 @@
 <section>
     <h3 class="title-page container">Links externos</h3>
     <div>
-        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center" (selectedTabChange)="selectedIndexTab($event)">
             <mat-tab label="INE">
                 <section class="content-tables">
-                    <table class="table">
+                    <table>
                         <tr>
                             <th>Selecciona tu respuesta de acuerdo al resultado de la búsqueda</th>
                             <th class="titles">SI</th>
                             <th class="titles">NO</th>
                             <th class="titles">No Aplica</th>
                         </tr>
-                        <tr>
-                            <td>¿La información devuelta por tus consultas es vigente?</td>
-                            <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-                            <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-                            <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-                        </tr>
-                        <tr>
-                            <td>¿La información devuelta por las coincide con la identificación del cliente?</td>
-                            <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-                            <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-                            <td class="checkbox"><mat-checkbox></mat-checkbox></td>
+                        <tr *ngFor="let question of getDataINE; let i = index">
+                            <td>{{ question.text }}</td>
+                            <td class="checkbox"><mat-checkbox [(ngModel)]="question.responses[0].selected" (change)="onCheckboxChangeINE(i, 0, question.number)"></mat-checkbox></td>
+                            <td class="checkbox"><mat-checkbox [(ngModel)]="question.responses[1].selected" (change)="onCheckboxChangeINE(i, 1, question.number)"></mat-checkbox></td>
+                            <td class="checkbox"><mat-checkbox [(ngModel)]="question.responses[2].selected" (change)="onCheckboxChangeINE(i, 2, question.number)"></mat-checkbox></td>
                         </tr>
                     </table>
                 </section>
             </mat-tab>
             <mat-tab label="CURP">
-                <table class="table">
-                    <tr>
-                        <th>Selecciona tu respuesta de acuerdo al resultado de la búsqueda</th>
-                        <th class="titles">SI</th>
-                        <th class="titles">NO</th>
-                        <th class="titles">No Aplica</th>
-                    </tr>
-                    <tr>
-                        <td>¿La información devuelta por tus consultas es vigente?</td>
-                        <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-                        <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-                        <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-                    </tr>
-                    <tr>
-                        <td>¿La información devuelta por las coincide con la identificación del cliente?</td>
-                        <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-                        <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-                        <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-                    </tr>
-                </table>
+                <section class="content-tables">
+                    <table>
+                        <tr>
+                            <th>Selecciona tu respuesta de acuerdo al resultado de la búsqueda</th>
+                            <th class="titles">SI</th>
+                            <th class="titles">NO</th>
+                            <th class="titles">No Aplica</th>
+                        </tr>
+                        <tr *ngFor="let question of getDataCURP; let i = index">
+                            <td>{{ question.text }}</td>
+                            <td class="checkbox"><mat-checkbox [(ngModel)]="question.responses[0].selected" (change)="onCheckboxChangeCURP(i, 0, question.number)"></mat-checkbox></td>
+                            <td class="checkbox"><mat-checkbox [(ngModel)]="question.responses[1].selected" (change)="onCheckboxChangeCURP(i, 1, question.number)"></mat-checkbox></td>
+                            <td class="checkbox"><mat-checkbox [(ngModel)]="question.responses[2].selected" (change)="onCheckboxChangeCURP(i, 2, question.number)"></mat-checkbox></td>
+                        </tr>
+                    </table>
+                </section>
             </mat-tab>
             <mat-tab label="SEPOMEX">
-                <table class="table">
-                    <tr>
-                        <th>Selecciona tu respuesta de acuerdo al resultado de la búsqueda</th>
-                        <th class="titles">SI</th>
-                        <th class="titles">NO</th>
-                        <th class="titles">No Aplica</th>
-                    </tr>
-                    <tr>
-                        <td>¿La información devuelta por tus consultas es vigente?</td>
-                        <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-                        <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-                        <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-                    </tr>
-                    <tr>
-                        <td>¿La información devuelta por las coincide con la identificación del cliente?</td>
-                        <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-                        <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-                        <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-                    </tr>
-                </table>
+                <section class="content-tables">
+                    <table>
+                        <tr>
+                            <th>Selecciona tu respuesta de acuerdo al resultado de la búsqueda</th>
+                            <th class="titles">SI</th>
+                            <th class="titles">NO</th>
+                            <th class="titles">No Aplica</th>
+                        </tr>
+                        <tr *ngFor="let question of getDataSEPOMEX; let i = index">
+                            <td>{{ question.text }}</td>
+                            <td class="checkbox"><mat-checkbox [(ngModel)]="question.responses[0].selected" (change)="onCheckboxChangeSEPOMEX(i, 0, question.number)"></mat-checkbox></td>
+                            <td class="checkbox"><mat-checkbox [(ngModel)]="question.responses[1].selected" (change)="onCheckboxChangeSEPOMEX(i, 1, question.number)"></mat-checkbox></td>
+                            <td class="checkbox"><mat-checkbox [(ngModel)]="question.responses[2].selected" (change)="onCheckboxChangeSEPOMEX(i, 2, question.number)"></mat-checkbox></td>
+                        </tr>
+                    </table>
+                </section>
             </mat-tab>
             <mat-tab label="OTROS">
-                <table class="table">
-                    <tr>
-                        <th>Selecciona tu respuesta de acuerdo al resultado de la búsqueda</th>
-                        <th class="titles">SI</th>
-                        <th class="titles">NO</th>
-                        <th class="titles">No Aplica</th>
-                    </tr>
-                    <tr>
-                        <td>¿La información devuelta por tus consultas es vigente?</td>
-                        <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-                        <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-                        <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-                    </tr>
-                    <tr>
-                        <td>¿La información devuelta por las coincide con la identificación del cliente?</td>
-                        <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-                        <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-                        <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-                    </tr>
-                </table>
+                <section class="content-tables">
+                    <table>
+                        <tr>
+                            <th>Selecciona tu respuesta de acuerdo al resultado de la búsqueda</th>
+                            <th class="titles">SI</th>
+                            <th class="titles">NO</th>
+                            <th class="titles">No Aplica</th>
+                        </tr>
+                        <tr *ngFor="let question of getDataOTROS; let i = index">
+                            <td>{{ question.text }}</td>
+                            <td class="checkbox"><mat-checkbox [(ngModel)]="question.responses[0].selected" (change)="onCheckboxChangeOTROS(i, 0, question.number)"></mat-checkbox></td>
+                            <td class="checkbox"><mat-checkbox [(ngModel)]="question.responses[1].selected" (change)="onCheckboxChangeOTROS(i, 1, question.number)"></mat-checkbox></td>
+                            <td class="checkbox"><mat-checkbox [(ngModel)]="question.responses[2].selected" (change)="onCheckboxChangeOTROS(i, 2, question.number)"></mat-checkbox></td>
+                        </tr>
+                    </table>
+                </section>
             </mat-tab>                
         </mat-tab-group>
     </div>

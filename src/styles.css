@@ -55,6 +55,17 @@ body {
     font-size: 12px;
 } 
 
+.btn-blue { 
+    font-size: 0.9rem;
+    width: auto;
+    background-color: var(--color-theme-principal) !important;
+    color: white !important;
+}
+
+.modal-width {
+    width: 43vw !important;
+}
+
 .active {
     background-color: var(--color-active);
 }
@@ -86,5 +97,30 @@ body {
     border-color: var(--color-theme-principal) !important;
     background-color: var(--color-theme-principal) !important;
 }
+
+/*padding tittle modal*/
+.mdc-dialog__title {
+    padding: 0 !important;
+}
+  
+
+@media screen and (max-width: 1024px) {
+    .modal-width {
+        width: 90vw !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .modal-width {
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .modal-width {
+        width: 100vw;
+    }
+}
+
 
 

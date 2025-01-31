@@ -26,17 +26,11 @@
             <th class="titles">NO</th>
             <th class="titles">No Aplica</th>
         </tr>
-        <tr>
-            <td>¿La información devuelta por tus consultas es vigente?</td>
-            <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-            <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-            <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-        </tr>
-        <tr>
-            <td>¿La información devuelta por las coincide con la identificación del cliente?</td>
-            <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-            <td class="checkbox"><mat-checkbox></mat-checkbox></td>
-            <td class="checkbox"><mat-checkbox></mat-checkbox></td>
+        <tr *ngFor="let question of questions; let i = index">
+            <td>{{ question.text }}</td>
+            <td class="checkbox"><mat-checkbox [(ngModel)]="question.responses[0].selected" (change)="onCheckboxChange(i, 0, question.number)"></mat-checkbox></td>
+            <td class="checkbox"><mat-checkbox [(ngModel)]="question.responses[1].selected" (change)="onCheckboxChange(i, 1, question.number)"></mat-checkbox></td>
+            <td class="checkbox"><mat-checkbox [(ngModel)]="question.responses[2].selected" (change)="onCheckboxChange(i, 2, question.number)"></mat-checkbox></td>
         </tr>
     </table>
 </section>
