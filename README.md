@@ -13,4 +13,4 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Deploy
 
 You can visit the next url for a preview of this project 👉
-[BegoApp](https://bego-interview-app.netlify.app/principal/orders)
+[BranchbitApp](https://interview-branchbit.netlify.app/principal/biometrics)
